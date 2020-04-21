@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="myProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath*:application.properties</value>
+			</list>
+		</property>
+	</bean>
+	<context:component-scan base-package="com.demo" />
+	<context:property-placeholder
+		location="classpath*:application.properties" />
+		
+	<!-- bean id="marvelRestTemplate1" class="com.demo.resttemplate.MarvelRestTemplate"/>
+	<bean id="googleTranslateRestTemplate" class="com.demo.resttemplate.GoogleTranslateRestTemplate"/-->
+	<!-- bean id="marvelCharacterInfoService" class="com.demo.service.MarvelCharacterInfoService">
+	    <constructor-arg index="0"  ref="marvelRestTemplate2" />
+	    <constructor-arg type="googleTranslateRestTemplate" index="1" name="googleTranslateRestTemplate" ref="googleTranslateRestTemplate" />
+	 </bean-->
+	
+</beans>
