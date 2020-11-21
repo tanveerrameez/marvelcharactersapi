@@ -1,5 +1,4 @@
 # Project 
-Coding Challenge
 The Marvel Comics API allows developers to access information about Marvel's vast library of
 comics.
 We want you to use the Marvel API (see http://developer.marvel.com/) to build a Characters API:
